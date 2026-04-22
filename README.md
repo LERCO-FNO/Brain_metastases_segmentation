@@ -62,7 +62,33 @@ pip install -e .
 After installation, the nnU-Net v2 commands (e.g., `nnUNetv2_predict_from_modelfolder`) will be available in your environment.
 
 # Inference
-For inference you can use the default [nnUNet inference functionalities](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md). 
+For inference you can use the default [nnUNet inference functionalities](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md).
+
+### Running Inference with Pre-trained Models
+
+The pre-trained models are available on Zenodo (see the "Trained Models / Zenodo" section above). After downloading the models from Zenodo, you can run inference on your data using the following command:
+
+```bash
+nnUNetv2_predict_from_modelfolder -i INPUT_FOLDER -o OUTPUT_FOLDER -m MODEL_FOLDER
+```
+
+Where:
+- `INPUT_FOLDER`: Path to the folder containing input NIfTI (.nii.gz) files (contrast-enhanced T1-weighted MRI scans)
+- `OUTPUT_FOLDER`: Path to the folder where segmentation results will be saved
+- `MODEL_FOLDER`: Path to the specific model folder (e.g., one of the fold directories or the full dataset model) from the downloaded Zenodo package
+
+For example, to run inference using fold_0 of a standard nnUNet 3d fullres model:
+```bash
+nnUNetv2_predict_from_modelfolder -i /path/to/input/data -o /path/to/output/results -m /path/to/downloaded_zenodo_models/nnUNetTrainer_3d_fullres__Dataset505_Brain_metastases_dataset_final__3d_fullres
+```
+
+**Note:** Ensure that your input data is in NIfTI format and matches the preprocessing requirements of the models.
+
+## Citation
+
+If you use this work in your research, please cite:
+
+[To be updated with the paper citation once published] 
 
 
 
