@@ -77,10 +77,6 @@ Where:
 - `OUTPUT_FOLDER`: Path to the folder where segmentation results will be saved
 - `MODEL_FOLDER`: Path to the specific model folder (e.g., one of the fold directories or the full dataset model) from the downloaded Zenodo package
 
-For example, to run inference using fold_0 of a standard nnUNet 3d fullres model:
-```bash
-nnUNetv2_predict_from_modelfolder -i /path/to/input/data -o /path/to/output/results -m /path/to/downloaded_zenodo_models/nnUNetTrainer_3d_fullres__Dataset505_Brain_metastases_dataset_final__3d_fullres
-```
 
 **Note:** Ensure that your input data is in NIfTI format and matches the preprocessing requirements of the models.
 
