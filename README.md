@@ -44,6 +44,40 @@ Pre-trained nnU-Net models for this project are available on Zenodo. These model
 A more detailed description of the trained models, preprocessing pipeline, inference usage, and benchmark results is provided in the accompanying Zenodo README file.
 
 
+## Usage
+### Installation
+
+Check out the official [nnUNet installation instructions](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/installation_instructions.md)
+
+nnU-Net needs to know where you intend to save raw data, preprocessed data and trained models. For this you need to set a few environment variables. Please follow the instructions [here](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/set_environment_variables.md)
+
+Clone and install nnU-Net:
+
+```bash
+git clone https://github.com/MIC-DKFZ/nnUNet.git
+cd nnUNet
+pip install -e .
+```
+
+After installation, the nnU-Net v2 commands (e.g., `nnUNetv2_predict_from_modelfolder`) will be available in your environment.
+
+# Inference
+For inference you can use the default [nnUNet inference functionalities](https://github.com/MIC-DKFZ/nnUNet/blob/master/documentation/how_to_use_nnunet.md). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
